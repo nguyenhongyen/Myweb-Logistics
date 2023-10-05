@@ -1,0 +1,299 @@
+:root{
+    /*=============  color  ===============*/
+    --primary-color:#013463;
+    --primary-hover:#013463;
+
+    --secondary-color:#1674b9;
+    --theme-color:#fd9005;
+
+    --white-color:#ffff;
+
+
+
+   /*=============   background-color  ===============*/
+
+    --bg-red-600:rgb(220 38 38);
+    --bg-red-700:rgb(185 28 28);
+    --bg-red-800:rgb(153 27 27);
+
+    /* ==============  text-color  ======================*/
+    --text-gray-100: rgb(243 244 246);
+    --text-gray-200: rgb(229 231 235);
+    --text-gray-300: rgb(209 213 219);
+    --text-gray-400: rgb(156 163 175);
+    --text-gray-500: rgb(107 114 128);
+    --text-gray-600: rgb(75 85 99);
+    --text-gray-700: rgb(55 65 81);
+    --text-gray-800: rgb(31 41 55);
+    --text-gray-900: rgb(17 24 39);
+
+
+    /* =============   font-size  ===============*/
+    --text-ratio: 1rem;
+    --text-xs: calc(var(--text-ratio) * 0.75);
+    --text-sm: calc(var(--text-ratio) * 0.8125);
+    --text-base: calc(var(--text-ratio) * 0.875); /*14*/
+    --text-md: calc(var(--text-ratio) * 1);  /*16*/
+    --text-lg: calc(var(--text-ratio) * 1.125);
+    --text-xl: calc(var(--text-ratio) * 1.25);
+    --text-2xl: calc(var(--text-ratio) * 1.5);
+    --text-3xl: calc(var(--text-ratio) * 1.75);
+    --text-4xl: calc(var(--text-ratio) * 2);
+    --text-5xl: calc(var(--text-ratio) * 2.125);
+    --text-6xl: calc(var(--text-ratio) * 2.25);
+    --text-7xl: calc(var(--text-ratio) * 2.5);
+    --text-8xl: calc(var(--text-ratio) * 2.75);
+
+    --spacing-ratio: 1rem;
+    --spacing-xxs: calc(var(--spacing-ratio) * 0.125);
+    --spacing-xs: calc(var(--spacing-ratio) * 0.25);
+    --spacing-sm: calc(var(--spacing-ratio) * 0.5);
+    --spacing-md: calc(var(--spacing-ratio) * 0.75);
+    --spacing-lg: calc(var(--spacing-ratio) * 1);
+    --spacing-xl: calc(var(--spacing-ratio) * 1.25);
+    --spacing-2xl: calc(var(--spacing-ratio) * 1.5);
+    --spacing-3xl: calc(var(--spacing-ratio) * 1.75);
+    --spacing-4xl: calc(var(--spacing-ratio) * 2);
+
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+
+    /* =============   transition  ===============*/
+    --transition-all: all 0.35s ease-in-out;
+    --transition-75: all 0.75s ease-in-out;
+
+    /* =============  border  ===============*/
+    --rounded:0.25rem;
+    --rounded-sm:0.125rem;
+    --rounded-md:0.375rem;
+    --rounded-lg:0.5rem;
+    --rounded-full:2rem;
+
+    /* ============= opacity ===============*/
+    --opacity-100:1;
+    --opacity-75:0.75;
+    --opacity-50:0.5;
+    --opacity-25:0.25;
+
+    --font-serif: 'Montserrat', sans-serif;
+
+    --shadow-2xl:0 20px 42px -14px rgb(0 0 0 / 8%);
+
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: auto !important;
+}
+
+
+body {
+    font: 400 14px/var(--body-line-height) var(--font-serif);
+    color: var( --text-gray-800);
+    overflow-x: hidden;
+    background-color: var(--white-color);
+}
+
+img, iframe {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+a, button, input, select, span, i {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: var(--heading-line-height);
+}
+
+button {
+    outline: none;
+}
+
+a:hover {
+    color: currentColor;
+}
+
+a, button, input, textarea {
+    -webkit-transition: var(--transition-all);
+    -o-transition: var(--transition-all);
+    transition: var(--transition-all);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+
+.z-index--1 {
+    z-index: -1;
+}
+
+.z-index-0 {
+    z-index: 0;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.z-index-3 {
+    z-index: 3;
+}
+
+.z-index-4 {
+    z-index: 4;
+}
+
+.z-index-5 {
+    z-index: 5;
+}
+
+.z-index-10 {
+    z-index: 10;
+}
+
+.text-1-line {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.text-2-line {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.text-3-line {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.text-4-line {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.limit-line-2{
+    --lines: 2;
+    --line-height: 1.2;
+    --font-size: 1em;
+
+    height: calc(var(--lines) * var(--font-size) * var(--line-height));
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--lines);
+    -webkit-box-orient: vertical;
+}
+
+.limit-line-3{
+    --lines: 2;
+    --line-height: 1.2;
+    --font-size: 1em;
+
+    height: calc(var(--lines) * var(--font-size) * var(--line-height));
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--lines);
+    -webkit-box-orient: vertical;
+}
+.limit-line-4{
+    --lines: 2;
+    --line-height: 1.2;
+    --font-size: 1em;
+
+    height: calc(var(--lines) * var(--font-size) * var(--line-height));
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--lines);
+    -webkit-box-orient: vertical;
+}
+
+.background-cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.background-contain {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.object-fit-cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.object-fit-contain {
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.section-gap{
+    padding: 50px 0;
+}
+.section-gap-25{
+    padding: 25px 0;
+}
+
+/* card
+    card-media
+        .media-wrapper
+            .media-img
+    card-main
+        .main-title
+        .main-desc
+ */
