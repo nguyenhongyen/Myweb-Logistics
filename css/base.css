@@ -85,12 +85,6 @@ html {
     font-size: 100%;
     scroll-behavior: auto !important;
 }
-@media(max-width: 1024px) {
-    html {
-        font-size: 90% !important;
-    }
-}
-
 
 body {
     font: 400 14px/var(--body-line-height) var(--font-serif);
